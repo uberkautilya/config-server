@@ -1,25 +1,25 @@
 # server:
 #   port: 9002
-spring:
-  main:
-    banner-mode: off
-  application:
-    name: USER-SERVICE
-  datasource:
-    url: jdbc:mysql://localhost:3306/microservices_dev?createDatabaseIfNotExist=true
-    username: root
-    password: root
-    driverClassName: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate.ddl-auto: update
-    defer-datasource-initialization: false
-    show-sql: false
-  sql:
-    init:
-      platform: mysql
-      mode: embedded
-      schema-locations:
-      data-locations:
+# spring:
+#   main:
+#     banner-mode: off
+#   application:
+#     name: USER-SERVICE
+#   datasource:
+#     url: jdbc:mysql://localhost:3306/microservices_dev?createDatabaseIfNotExist=true
+#     username: root
+#     password: root
+#     driverClassName: com.mysql.cj.jdbc.Driver
+#   jpa:
+#     hibernate.ddl-auto: update
+#     defer-datasource-initialization: false
+#     show-sql: false
+#   sql:
+#     init:
+#       platform: mysql
+#       mode: embedded
+#       schema-locations:
+#       data-locations:
 #To register with eureka at port 8761
 eureka:
   client:
@@ -30,12 +30,12 @@ eureka:
     instance:
       hostname: localhost
 # To use the above properties in a config server, the below lines need to be added to the application.yml file of the microservice
-spring:
-  application:
-    name: CONFIG-SERVER
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/uberkautilya/config-server
-          clone-on-start: true
+# spring:
+#   application:
+#     name: CONFIG-SERVER
+#   cloud:
+#     config:
+#       server:
+#         git:
+#           uri: https://github.com/uberkautilya/config-server
+#           clone-on-start: true
