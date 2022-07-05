@@ -29,3 +29,13 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
     instance:
       hostname: localhost
+# To use the above properties in a config server, the below lines need to be added to the application.yml file of the microservice
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/uberkautilya/config-server
+          clone-on-start: true
